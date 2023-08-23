@@ -32,6 +32,7 @@ local plugins = {
   {'theprimeagen/harpoon'},
 {
   'VonHeikemen/lsp-zero.nvim',
+  branch = 'v2.x',
   dependencies = {
     -- LSP Support
     {'neovim/nvim-lspconfig'},
