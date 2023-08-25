@@ -25,7 +25,6 @@ end)
 -- Language servers
 lsp_zero.ensure_installed({
     "lua_ls",
-    "clangd",
 })
 lspconfig.lua_ls.setup({
     settings = {
