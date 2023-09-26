@@ -1,14 +1,9 @@
 local plugins = {
     { 'folke/lazy.nvim' },
-    { 'glepnir/galaxyline.nvim',
-      branch = 'main',
+    { 'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true },
 
-      config = function()
-          require('galaxyline')
-      end,
-
-      dependencies ={ { 'kyazdani42/nvim-web-devicons', lazy = true },},
-  },
+},
       {
           'nvim-telescope/telescope.nvim', tag = '0.1.0',
           -- or                            , branch = '0.1.x',
@@ -27,8 +22,20 @@ local plugins = {
 
   },
 
-
   },
+
+  {"folke/neodev.nvim", opts = {} },
+
+  {"rcarriga/nvim-dap-ui",
+  dependencies = {
+      {"mfussenegger/nvim-dap"},
+      {"nvim-telescope/telescope-dap.nvim"},
+      {'theHamsta/nvim-dap-virtual-text'},
+  },
+
+
+  }, 
+  
   {"kylechui/nvim-surround",
     version = "*"
   },
