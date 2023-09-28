@@ -4,6 +4,11 @@ local plugins = {
     dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true },
 
 },
+{ "ggandor/leap.nvim",
+    dependencies = { "tpope/vim-repeat" },
+
+},
+
       {
           'nvim-telescope/telescope.nvim', tag = '0.1.0',
           -- or                            , branch = '0.1.x',
@@ -34,8 +39,8 @@ local plugins = {
   },
 
 
-  }, 
-  
+  },
+
   {"kylechui/nvim-surround",
     version = "*"
   },
