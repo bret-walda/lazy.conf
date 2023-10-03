@@ -1,4 +1,5 @@
 require("dapui").setup()
+require("nvim-dap-virtual-text").setup({})
 vim.keymap.set("n", "<leader>dr", ":lua require'dapui'.open({reset = true})<CR>")
 vim.keymap.set("n", "<leader>dc", ":lua require'dapui'.close()<CR>")
 vim.keymap.set("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>")
@@ -28,6 +29,6 @@ dap.configurations.cpp = {
     stopOnEntry = false,
   },
 }
+dap.configurations.rust = dap.configurations.cpp
 
 
-require("nvim-dap-virtual-text").setup({})
