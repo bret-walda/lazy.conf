@@ -44,8 +44,7 @@ local plugins = {
   {"kylechui/nvim-surround",
     version = "*"
   },
-  {'theprimeagen/harpoon'},
-{
+  {
   'VonHeikemen/lsp-zero.nvim',
   branch = 'v3.x',
   dependencies = {
