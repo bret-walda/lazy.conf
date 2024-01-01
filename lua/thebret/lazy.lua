@@ -40,6 +40,10 @@ local plugins = {
 
 
   },
+  {
+      "nvim-neorg/neorg",
+      build = ":Neorg sync-parsers",
+  },
 
   {"kylechui/nvim-surround",
     version = "*"

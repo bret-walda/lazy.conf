@@ -1,11 +1,10 @@
-local lsp = require('lsp-zero')
+local lsp = require('lsp-zero').preset({manage_nvim_cmp = false})
 lsp.on_attach(function(client, bufnr)
   -- see :help lsp-zero-keybindings
   -- to learn the available actions
   lsp.default_keymaps({buffer = bufnr})
 end)
 
-require('lspconfig').clangd.setup({})
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
@@ -15,4 +14,37 @@ require('mason-lspconfig').setup({
     },
 })
 
+require('lspconfig').clangd.setup({})
+require('lspconfig').lua_ls.setup({})
 
+
+local cmp = require('cmp')
+local cmp_action = require('lsp-zero').cmp_action()
+local cmp_select = {behavior = cmp.SelectBehavior.Select}
+
+cmp.setup({
+
+    sources = {
+        {name = 'nvim_lsp'},
+        {name = 'luasnip'},
+        {name = 'buffer'},
+        {name = 'path'},
+        {name = 'nvim_lua'},
+
+    },
+
+    mapping = cmp.mapping.preset.insert({
+
+    ['<CR>'] = cmp.mapping.confirm({select = false}),
+
+    ['<C-Space>'] = cmp.mapping.complete(),
+
+    ['<C-f>'] = cmp_action.luasnip_jump_forward(),
+    ['<C-b>'] = cmp_action.luasnip_jump_backward(),
+
+    ['<C-u>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-d>'] = cmp.mapping.scroll_docs(4),
+
+
+    }),
+})
