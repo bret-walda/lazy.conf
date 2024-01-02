@@ -1,16 +1,20 @@
 local plugins = {
     { 'folke/lazy.nvim' },
     { 'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true },
+    dependencies = {
+        { 'nvim-tree/nvim-web-devicons', lazy = true },
+    },
 
 },
 { "ggandor/leap.nvim",
-    dependencies = { "tpope/vim-repeat" },
+    dependencies ={
+        { "tpope/vim-repeat" },
+    },
 
 },
 
       {
-          'nvim-telescope/telescope.nvim', tag = '0.1.4',
+          'nvim-telescope/telescope.nvim', tag = '0.1.5',
           -- or                            , branch = '0.1.x',
           dependencies = { {'nvim-lua/plenary.nvim'}, },
       },
@@ -38,7 +42,6 @@ local plugins = {
       {'theHamsta/nvim-dap-virtual-text'},
   },
 
-
   },
   {
       "nvim-neorg/neorg",
@@ -49,27 +52,31 @@ local plugins = {
     version = "*"
   },
   {
+      'akinsho/toggleterm.nvim',
+      version = "*",
+  },
+{
   'VonHeikemen/lsp-zero.nvim',
   branch = 'v3.x',
   dependencies = {
     -- LSP Support
+    --
     {'neovim/nvim-lspconfig'},
+    {'hrsh7th/nvim-cmp'},
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'saadparwaiz1/cmp_luasnip'},
+    {'rafamadriz/friendly-snippets'},
+    {'L3MON4D3/LuaSnip'},
+    {'hrsh7th/cmp-buffer'},
+    {'hrsh7th/cmp-path'},
+    {'hrsh7th/cmp-nvim-lua'},
     {'williamboman/mason.nvim'},
     {'williamboman/mason-lspconfig.nvim'},
 
-    -- Autocompletion
-    {'hrsh7th/nvim-cmp'},
-    {'hrsh7th/cmp-buffer'},
-    {'hrsh7th/cmp-path'},
-    {'saadparwaiz1/cmp_luasnip'},
-    {'hrsh7th/cmp-nvim-lsp'},
-    {'hrsh7th/cmp-nvim-lua'},
-    {'windwp/nvim-autopairs'},
-
-    -- Snippets
-    {'L3MON4D3/LuaSnip'},
-    {'rafamadriz/friendly-snippets'},
 },
+},
+{
+    'windwp/nvim-autopairs'
 },
 }
  require("lazy").setup(plugins, { defaults = {lazy = true,},})

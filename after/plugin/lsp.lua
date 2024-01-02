@@ -1,4 +1,4 @@
-local lsp = require('lsp-zero').preset({manage_nvim_cmp = false})
+local lsp = require('lsp-zero')
 lsp.on_attach(function(client, bufnr)
   -- see :help lsp-zero-keybindings
   -- to learn the available actions
@@ -11,11 +11,14 @@ require('mason-lspconfig').setup({
     ensure_installed = {},
     handlers = {
         lsp.default_setup,
+        lua_ls = function()
+            local lua_opts = lsp.nvim_lua_ls()
+            require('lspconfig').lua_ls.setup(lua_opts)
+        end,
     },
 })
 
 require('lspconfig').clangd.setup({})
-require('lspconfig').lua_ls.setup({})
 
 
 local cmp = require('cmp')
@@ -23,16 +26,13 @@ local cmp_action = require('lsp-zero').cmp_action()
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 
 cmp.setup({
-
     sources = {
         {name = 'nvim_lsp'},
         {name = 'luasnip'},
         {name = 'buffer'},
         {name = 'path'},
         {name = 'nvim_lua'},
-
     },
-
     mapping = cmp.mapping.preset.insert({
 
     ['<CR>'] = cmp.mapping.confirm({select = false}),
