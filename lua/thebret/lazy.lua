@@ -1,11 +1,8 @@
 local plugins = {
     { 'folke/lazy.nvim' },
-    { 'nvim-lualine/lualine.nvim',
-    dependencies = {
-        { 'nvim-tree/nvim-web-devicons', lazy = true },
-    },
+    { 'nvim-lualine/lualine.nvim'},
+    {'nvim-tree/nvim-web-devicons'},
 
-},
 { "ggandor/leap.nvim",
     dependencies ={
         { "tpope/vim-repeat" },
@@ -77,6 +74,12 @@ dependencies = {
 },
 {
     'windwp/nvim-autopairs'
+},
+{
+    'nvim-tree/nvim-tree.lua'
+},
+{
+    'nvim-telescope/telescope-ui-select.nvim'
 },
 }
  require("lazy").setup(plugins, { defaults = {lazy = false,},})
