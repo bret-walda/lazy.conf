@@ -58,7 +58,7 @@ local plugins = {
 {
   'VonHeikemen/lsp-zero.nvim',
   branch = 'v3.x',
-  dependencies = {
+dependencies = {
     -- LSP Support
     --
     {'neovim/nvim-lspconfig'},
@@ -79,4 +79,4 @@ local plugins = {
     'windwp/nvim-autopairs'
 },
 }
- require("lazy").setup(plugins, { defaults = {lazy = true,},})
+ require("lazy").setup(plugins, { defaults = {lazy = false,},})
