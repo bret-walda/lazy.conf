@@ -19,6 +19,7 @@ require("nvim-tree").setup({
     filters = {
         dotfiles = false,
     },
+
 })
 
 vim.keymap.set("n","<leader>fc",":NvimTreeToggle<CR>")

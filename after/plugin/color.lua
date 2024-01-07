@@ -1,3 +1,8 @@
-vim.opt.background = 'dark'
+require('rose-pine').setup({
+    variant = 'moon',
 
-vim.cmd("colorscheme rose-pine")
+    dark_variant = 'main',
+    disable_background = false,
+    disable_italics = true,
+})
+vim.cmd('colorscheme rose-pine')
