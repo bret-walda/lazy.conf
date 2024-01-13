@@ -15,6 +15,12 @@ require('mason-lspconfig').setup({
             local lua_opts = lsp.nvim_lua_ls()
             require('lspconfig').lua_ls.setup(lua_opts)
         end,
+        rust_analyzer = function()
+            require('lspconfig').rust_analyzer.setup({})
+        end,
+        cmake = function()
+            require('lspconfig').cmake.setup({})
+        end,
     },
 })
 
@@ -37,7 +43,7 @@ cmp.setup({
 
     ['<CR>'] = cmp.mapping.confirm({select = false}),
 
-   -- ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-Space>'] = cmp.mapping.complete(),
 
     ['<Tab>'] = cmp_action.luasnip_supertab(),
     ['<S-Tab>'] = cmp_action.select_prev_or_fallback(),

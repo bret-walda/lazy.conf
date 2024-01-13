@@ -17,7 +17,7 @@ local plugins = {
       },
 
   {
-      'rose-pine/neovim',
+      'folke/tokyonight.nvim', --Theme for Neovim
   },
 
   {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate',
@@ -80,6 +80,12 @@ dependencies = {
 },
 {
     'nvim-telescope/telescope-ui-select.nvim'
+},
+{
+   "Maan2003/lsp_lines.nvim"
+},
+{
+    "folke/trouble.nvim"
 },
 }
  require("lazy").setup(plugins, { defaults = {lazy = false,},})
