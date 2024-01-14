@@ -5,3 +5,4 @@ vim.diagnostic.config({
   virtual_lines = true,
 })
 
+vim.keymap.set("","<leader>lp",require("lsp_lines").toggle)

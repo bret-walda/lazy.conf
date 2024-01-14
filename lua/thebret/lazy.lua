@@ -24,6 +24,7 @@ local plugins = {
   dependencies = { { 'nvim-treesitter/playground' },
                    { 'mbbill/undotree' },
                    { 'tpope/vim-fugitive' },
+                   { 'nvim-treesitter/nvim-treesitter-textobjects'},
 
 
   },
@@ -95,6 +96,34 @@ dependencies = {
 },
 {
     "goolord/alpha-nvim"
+},
+{
+    "lukas-reineke/indent-blankline.nvim", main = "ibl",
+},
+{
+    "matbme/JABS.nvim"
+},
+{
+    "lewis6991/gitsigns.nvim"
+},
+{
+    "folke/todo-comments.nvim"
+},
+{
+    "folke/noice.nvim",
+    dependencies = {
+        {"MunifTanjim/nui.nvim"},
+        {"rcarriga/nvim-notify"},
+    },
+},
+{
+    "folke/which-key.nvim"
+},
+{
+    "kevinhwang91/nvim-ufo",
+    dependencies = {
+        {"kevinhwang91/promise-async"},
+    },
 },
 }
  require("lazy").setup(plugins, { defaults = {lazy = false,},})
