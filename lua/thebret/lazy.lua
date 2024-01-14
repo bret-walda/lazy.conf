@@ -87,5 +87,14 @@ dependencies = {
 {
     "folke/trouble.nvim"
 },
+{
+    "folke/zen-mode.nvim"
+},
+{
+    "folke/twilight.nvim"
+},
+{
+    "goolord/alpha-nvim"
+},
 }
  require("lazy").setup(plugins, { defaults = {lazy = false,},})
