@@ -9,3 +9,7 @@ vim.o.foldenable = true
 vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
 vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
 
+--zf to create a fold
+--zo to open the fold
+--za to toggle the fold open and close
+--zD to delete all folds under your cursor recursively
