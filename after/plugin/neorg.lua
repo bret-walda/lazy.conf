@@ -5,10 +5,17 @@ require("neorg").setup{
             ["core.dirman"]={
                 config = {
                     workspaces = {
-                        notes = "~/notes"
+                        notes = "~/notes",
                     },
+                    default_workspace = "notes",
+                    index = "index.norg",
                 },
             },
+            ["core.completion"]={
+                config = {
+                    engine = "nvim-cmp",
+                }
+            }
 
         },
     }

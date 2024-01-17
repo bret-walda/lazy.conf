@@ -51,7 +51,7 @@ position = "bottom", -- position of the list can be: bottom, top, left, right
       information = "",
       other = "",
     },
-    use_diagnostic_signs = false -- enabling this will use the signs defined in your lsp client
+    use_diagnostic_signs = false, -- enabling this will use the signs defined in your lsp client
 })
 -- Lua
 vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle() end)

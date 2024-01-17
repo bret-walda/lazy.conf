@@ -47,6 +47,9 @@ local plugins = {
   {
       "nvim-neorg/neorg",
       build = ":Neorg sync-parsers",
+      dependencies = {
+          {"nvim-neorg/neorg-telescope"},
+      },
   },
 
   {"kylechui/nvim-surround",

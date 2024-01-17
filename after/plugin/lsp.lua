@@ -38,6 +38,7 @@ cmp.setup({
         {name = 'buffer'},
         {name = 'path'},
         {name = 'nvim_lua'},
+        {name = "neorg"},
     },
     mapping = cmp.mapping.preset.insert({
 

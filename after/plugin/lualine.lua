@@ -49,6 +49,37 @@ local config = {
      -- inactive = { c = { fg = colors.fg, bg = colors.bg } },
    -- },
   },
+  winbar = {
+    -- these are to remove the defaults
+    lualine_a = {},
+    lualine_b = {},
+    lualine_y = {},
+    lualine_z = {},
+    -- These will be filled later
+    lualine_c = {
+        {
+            '%f',
+            color = {fg = colors.magenta, gui = 'bold'},
+        },
+    },
+    lualine_x = {},
+  },
+  inactive_winbar = {
+    -- these are to remove the defaults
+    lualine_a = {},
+    lualine_b = {},
+    lualine_y = {},
+    lualine_z = {},
+    lualine_c = {
+        {
+            '%f',
+            color = {fg = colors.magenta, gui = 'bold'},
+
+        },
+    },
+    lualine_x = {},
+  },
+
   sections = {
     -- these are to remove the defaults
     lualine_a = {},
@@ -57,6 +88,7 @@ local config = {
     lualine_z = {},
     -- These will be filled later
     lualine_c = {},
+
     lualine_x = {},
   },
   inactive_sections = {
@@ -149,6 +181,10 @@ ins_left {
   },
 }
 
+ins_left{
+    'mode',
+    color = { gui = 'bold' },
+}
 -- Insert mid section. You can make any number of sections in neovim :)
 -- for lualine it's any number greater then 2
 ins_left {

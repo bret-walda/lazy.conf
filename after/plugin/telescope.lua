@@ -9,6 +9,7 @@ wk.register({
     r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File", noremap=false, }, -- additional options for creating the keymap
     n = { "New File" }, -- just a label. don't create any mapping
     i = { "<cmd>Telescope git_files<cr>", "Find Git Files in a directory"},
+    l = { "<cmd>Telescope live_grep<cr>", "Does live_grep"},
     e = "Edit File", -- same as above
     ["1"] = "which_key_ignore",  -- special label to hide it in the popup
     g = { function() builtin.grep_string({search = vim.fn.input("Grep > ")}); end, "Foobar" } -- you can also pass functions!

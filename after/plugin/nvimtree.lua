@@ -19,11 +19,9 @@ require("nvim-tree").setup({
     filters = {
         dotfiles = false,
     },
-
 })
 
 vim.keymap.set("n","<leader>fc",":NvimTreeToggle<CR>",{ silent = true })
 vim.keymap.set("n","<leader>nf",":NvimTreeFocus<CR>",{ silent = true })
 vim.keymap.set("n","<leader>fd",":NvimTreeFindFile<CR>",{ silent = true })
 vim.keymap.set("n","<leader>dd",":NvimTreeCollapse<CR>",{ silent = true })
-
