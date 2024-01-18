@@ -7,4 +7,3 @@ require'nvim-web-devicons'.setup{
     strict = true;
 }
 
---added this comment
