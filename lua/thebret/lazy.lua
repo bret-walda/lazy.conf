@@ -131,5 +131,8 @@ dependencies = {
         {"kevinhwang91/promise-async"},
     },
 },
+{
+    "karb94/neoscroll.nvim",
+},
 }
  require("lazy").setup(plugins, { defaults = {lazy = false,},})
