@@ -13,7 +13,7 @@ require('todo-comments').setup({
     HACK = { icon = " ", color = "warning" },
     WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
     PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-    NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
+    NOTE = { icon = "󱝽 ", color = "hint", alt = { "INFO","REM" } },
     TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
   },
   gui_style = {
@@ -63,6 +63,6 @@ require('todo-comments').setup({
   },
 })
 
-vim.keymap.set("n","<leader>tf",":TodoQuickFix<CR>")
+vim.keymap.set("n","<leader>tf",":TodoTrouble<CR>")
 vim.keymap.set("n","<leader>td",":TodoTelescope<CR>")
 
