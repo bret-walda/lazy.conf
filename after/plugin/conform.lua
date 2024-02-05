@@ -4,7 +4,6 @@ require("conform").setup({
     -- Conform will run multiple formatters sequentially
     cpp = { "clang_format"},
     -- Use a sub-list to run only the first available formatter
-    txt = { "cmake_format"},
   },
 })
 vim.api.nvim_create_autocmd("BufWritePre", {
