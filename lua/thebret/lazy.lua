@@ -134,5 +134,11 @@ dependencies = {
 {
     "karb94/neoscroll.nvim",
 },
+{
+    "mfussenegger/nvim-lint",
+},
+{
+    "stevearc/conform.nvim",
+},
 }
  require("lazy").setup(plugins, { defaults = {lazy = false,},})
