@@ -12,6 +12,6 @@ wk.register({
     l = { "<cmd>Telescope live_grep<cr>", "Does live_grep"},
     e = "Edit File", -- same as above
     ["1"] = "which_key_ignore",  -- special label to hide it in the popup
-    g = { function() builtin.grep_string({search = vim.fn.input("Grep > ")}); end, "Foobar" } -- you can also pass functions!
+    g = { function() builtin.grep_string({search = vim.fn.input("Grep > ")}); end, "Grep" } -- you can also pass functions!
   },
 }, { prefix = "<leader>" })
