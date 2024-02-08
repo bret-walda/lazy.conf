@@ -140,5 +140,8 @@ dependencies = {
 {
     "stevearc/conform.nvim",
 },
+{
+    "lervag/vimtex",
+},
 }
  require("lazy").setup(plugins, { defaults = {lazy = false,},})
