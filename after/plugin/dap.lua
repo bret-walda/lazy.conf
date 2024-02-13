@@ -30,4 +30,5 @@ dap.configurations.cpp = {
   },
 }
 dap.configurations.rust = dap.configurations.cpp
+dap.configurations.hare = dap.configurations.cpp
 
