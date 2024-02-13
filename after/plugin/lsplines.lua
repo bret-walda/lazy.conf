@@ -6,6 +6,7 @@ vim.diagnostic.config({
     virtual_lines = true,
 })
 local is_on = false
+local i = 1
 
 local function configure_virtual_lines()
     if is_on then
@@ -18,6 +19,10 @@ local function configure_virtual_lines()
             virtual_lines = { only_current_line = false }
         })
         is_on = true
+        if i == 1 then
+            print("Toggle for current line error display, activated for this session")
+            i = 0
+        end
     end
 end
 
